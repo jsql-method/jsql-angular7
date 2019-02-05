@@ -1,0 +1,5 @@
+/**
+ * @license jsql-angular
+ * Copyright (c) 2018 JSQL
+ * Licensed under the ISC license
+ */

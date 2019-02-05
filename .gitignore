@@ -1,0 +1,11 @@
+$ cat .gitignore
+/node_modules
+/dist
+/documentation
+/coverage
+
+*.log
+*.tgz
+/.idea
+/jsql-angular7.iml
+/package-lock.json
