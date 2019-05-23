@@ -15,11 +15,11 @@ ECHO Po wci�ni�ciu enter zmiany b�d� publikowane w rejestrze NPM
 ECHO.
 pause >nul
 ECHO Zmiany s� teraz publikowane w rejestrze NPM
-CALL npm install
-CALL rmdir node_modules\jsql-core /s /q
-CALL npm install jsql-core
-CALL npm run build && cd dist
+CALL prepare.bat
+CALL build.bat
+CALL cd dist
 CALL npm publish
+CALL cd ..
 
 REM wylogowuje ############################################################
 CALL npm logout

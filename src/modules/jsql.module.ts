@@ -6,6 +6,8 @@ import {HttpClientModule} from '@angular/common/http';
 export interface JsqlConfig {
     host: string;
     path?: string;
+    devKey?: string;
+    apiKey?: string;
     headers?: { [key: string]: string; };
     hideErrors?: boolean;
     rxjs?: boolean;

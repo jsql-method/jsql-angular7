@@ -31,23 +31,4 @@ describe('JsqlService', () => {
             })
     );
 
-    it('should test JsqlService methods object',
-        async(inject([JsqlService],
-            (jsqlService: JsqlService) => {
-
-                jsqlService.select('NJiE0YnGZJcXsE1cOnFGKg')
-                    .param('test', 1)
-                    .rx.subscribe((res: any) => {
-
-                    console.log('response');
-                    console.log(res);
-
-                }, (err: any) => {
-                    console.log('error');
-                    console.log(err);
-                })
-
-            }))
-    );
-
 });

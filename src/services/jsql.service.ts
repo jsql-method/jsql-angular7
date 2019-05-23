@@ -84,9 +84,6 @@ export class JsqlService {
         };
 
         config.rxjs = true;
-
-        console.log('config', config);
-
         this.jsql = new this.nativeWindow.JSQL(config);
     }
 
@@ -118,8 +115,8 @@ export class JsqlService {
         return this.jsql.delete(token);
     }
 
-    public repo(): any {
-        return this.jsql.repo();
+    public repo(name: string): any {
+        return this.jsql.repo(name);
     }
 
     public get(queryName: string): any {
@@ -130,8 +127,12 @@ export class JsqlService {
         return this.jsql.set(queryName, sqlQuery);
     }
 
-    public query(sqlQuery: string): any {
+    public query(sqlQuery: any): any {
         return this.jsql.query(sqlQuery);
+    }
+
+    public tx(): any {
+        return this.jsql.tx();
     }
     
 }

@@ -1,7 +1,6 @@
 {
     "name": "jsql-angular7",
-    "private": true,
-    "version": "0.0.5",
+    "version": "0.3.0",
     "description": "JSQL plugin for Angular 7",
     "main": "./bundles/jsql-angular.umd.js",
     "module": "./fesm5/jsql-angular.js",
@@ -36,9 +35,14 @@
         "jsql-it",
         "jsql-optimization"
     ],
-    "license": "ISC",
+    "licenses": [
+        {
+            "type": "LicenseRef-LICENSE",
+            "url": "https://jsql.it/public-packages-license"
+        }
+    ],
     "dependencies": {
-        "jsql-core": "^1.1.7",
+        "jsql-core": "^1.3.0",
         "tslib": "^1.9.0"
     },
     "peerDependencies": {
