@@ -65,7 +65,7 @@ export class JsqlService {
         this.nativeWindow.JSQL.prototype.wrap = function (token: any, queryType: any, selfReference: any): any {
 
             let requestObservableWrapper = this.construct(token, queryType);
-            requestObservableWrapper.rx = Observable.create((observer: any) => {
+            requestObservableWrapper.__rxobservable = Observable.create((observer: any) => {
 
                 requestObservableWrapper.checkAndCreateXhrPromise();
 
@@ -78,6 +78,14 @@ export class JsqlService {
                         observer.error(err);
                     });
             });
+
+            requestObservableWrapper.rx = function(){
+                return requestObservableWrapper.__rxobservable;
+            };
+
+            requestObservableWrapper.observe = function(){
+                return requestObservableWrapper.__rxobservable;
+            };
 
             return requestObservableWrapper;
 
