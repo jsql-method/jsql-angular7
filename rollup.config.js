@@ -50,6 +50,6 @@ export default {
         globals: globals,
         sourcemap: true,
         exports: 'named',
-        amd: { id: 'jsql-angular' }
+        amd: { id: 'jsql-angular7' }
     }
 }
