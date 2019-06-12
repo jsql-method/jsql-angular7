@@ -71,10 +71,10 @@ export class JsqlService {
 
                 requestObservableWrapper.xhrPromise
                     .subscribe((res: any) => {
-                        requestObservableWrapper.thenRxjs(res);
+                        res = requestObservableWrapper.thenRxjs(res);
                         observer.next(res);
                     }, (err: any) => {
-                        requestObservableWrapper.catchRxjs(err);
+                        err = requestObservableWrapper.catchRxjs(err);
                         observer.error(err);
                     });
             });
