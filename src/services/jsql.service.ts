@@ -87,6 +87,10 @@ export class JsqlService {
                 return requestObservableWrapper.__rxobservable;
             };
 
+            requestObservableWrapper.ok = function(){
+                return requestObservableWrapper.__rxobservable.subscribe((res: any) => {});
+            };
+
             return requestObservableWrapper;
 
         };
